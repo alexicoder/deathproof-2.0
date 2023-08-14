@@ -150,3 +150,9 @@ body {
     align-items: center;
     gap: 5px;
 }
+
+/* Sidebar social styles */
+
+.sidebar-social-wrapper {
+    padding: 0 1.875em;
+}
