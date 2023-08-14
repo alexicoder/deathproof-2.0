@@ -177,3 +177,10 @@ body {
     padding: .2em;
     border-bottom: solid 2px var(--main-background-colour);
 }
+
+.copyright {
+    padding: 0 1.875em;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: auto;
+}
