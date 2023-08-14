@@ -115,4 +115,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3.75em;
+    padding: 1.875em 0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
