@@ -80,6 +80,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-sm {
+    font-size: 20px;
+}
+
 .icon-ph_envelope:before {
   content: "\e900";
 }
@@ -127,6 +131,22 @@ body {
 
 /* Sidebar Nav Styles */
 .sidebar-nav-title {
-    margin-bottom: 0.625em;
+    margin: 0 1.875em 0.625em 1.875em;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
+.sidebar-nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav-link {
+    color: var(--text-colour);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 1.875em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
