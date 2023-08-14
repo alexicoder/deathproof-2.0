@@ -1,87 +1,97 @@
 :root {
-    /* Colours */
-    --main-background-colour: #1a1a1a;
-    --secondary-background-color: #2c2c2c;
-    --primary-accent-colour: #f44336;
-    --secondary-accent-colour: #ff9800;
-    --tertiary-accent-colour: #ffeb3b;
-    --subdued-accent-colour: #9c27b0;
-    --neon-accent-colour: #00bcd4;
-    --interactive-colour: #4caf50;
-    --heading-colour: #dadada;
-    --text-colour: #bdbdbd;
-    
-    /* Typography */
-    --text-xxl: clamp(38px, 4.5vw, 46px);
-    --text-xl: clamp(30px, 3.2vw, 36px);
-    --text-lg: 20px;
-    --text-md: 18px;
-    --text-sm: 16px;
-    --text-xs: 14px;
+  /* Colours */
+  --main-background-colour: #1a1a1a;
+  --secondary-background-color: #2c2c2c;
+  --primary-accent-colour: #f44336;
+  --secondary-accent-colour: #ff9800;
+  --tertiary-accent-colour: #ffeb3b;
+  --subdued-accent-colour: #9c27b0;
+  --neon-accent-colour: #00bcd4;
+  --interactive-colour: #4caf50;
+  --heading-colour: #dadada;
+  --text-colour: #bdbdbd;
+
+  /* Typography */
+  --text-xxl: clamp(38px, 4.5vw, 46px);
+  --text-xl: clamp(30px, 3.2vw, 36px);
+  --text-lg: 20px;
+  --text-md: 18px;
+  --text-sm: 16px;
+  --text-xs: 14px;
 }
 
 @font-face {
-    font-family: 'icomoon';
-    src:  url('/assets/fonts/icon/icomoon.eot');
-    src:  url('/assets/fonts/icon/icomoon.eot') format('embedded-opentype'),
-      url('/assets/fonts/icon/icomoon.ttf') format('truetype'),
-      url('/assets/fonts/icon/icomoon.woff') format('woff'),
-      url('/assets/fonts/icon/icomoon.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-@font-face {
-    font-family: 'Rubik Light';
-    src: url(/assets/fonts/text/Rubik-VariableFont_wght.eot) format('embedded-opentype'),
-        url(/assets/fonts/text/Rubik-VariableFont_wght.ttf) format('truetype'),
-        url(/assets/fonts/text/Rubik-VariableFont_wght.woff) format('woff'),
-        url(/assets/fonts/text/Rubik-VariableFont_wght.woff2) format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "icomoon";
+  src: url("/assets/fonts/icon/icomoon.eot");
+  src: url("/assets/fonts/icon/icomoon.eot") format("embedded-opentype"),
+    url("/assets/fonts/icon/icomoon.ttf") format("truetype"),
+    url("/assets/fonts/icon/icomoon.woff") format("woff"),
+    url("/assets/fonts/icon/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-  .icon {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak-as: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+@font-face {
+  font-family: "Rubik Light";
+  src: url(/assets/fonts/text/Rubik-VariableFont_wght.eot)
+      format("embedded-opentype"),
+    url(/assets/fonts/text/Rubik-VariableFont_wght.ttf) format("truetype"),
+    url(/assets/fonts/text/Rubik-VariableFont_wght.woff) format("woff"),
+    url(/assets/fonts/text/Rubik-VariableFont_wght.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  .icon-ph_envelope:before {
-    content: "\e900";
-  }
-  .icon-ph_facebook-logo:before {
-    content: "\e901";
-  }
-  .icon-ph_house:before {
-    content: "\e902";
-  }
-  .icon-ph_image:before {
-    content: "\e903";
-  }
-  .icon-ph_instagram-logo:before {
-    content: "\e904";
-  }
-  .icon-ph_music-notes:before {
-    content: "\e905";
-  }
-  .icon-ph_pen:before {
-    content: "\e906";
-  }
-  .icon-ph_soundcloud-logo:before {
-    content: "\e907";
-  }
-  .icon-ph_spotify-logo:before {
-    content: "\e908";
-  }
-  
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ph_envelope:before {
+  content: "\e900";
+}
+.icon-ph_facebook-logo:before {
+  content: "\e901";
+}
+.icon-ph_house:before {
+  content: "\e902";
+}
+.icon-ph_image:before {
+  content: "\e903";
+}
+.icon-ph_instagram-logo:before {
+  content: "\e904";
+}
+.icon-ph_music-notes:before {
+  content: "\e905";
+}
+.icon-ph_pen:before {
+  content: "\e906";
+}
+.icon-ph_soundcloud-logo:before {
+  content: "\e907";
+}
+.icon-ph_spotify-logo:before {
+  content: "\e908";
+}
