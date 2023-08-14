@@ -95,3 +95,9 @@
 .icon-ph_spotify-logo:before {
   content: "\e908";
 }
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--secondary-background-color);
+    
+}
