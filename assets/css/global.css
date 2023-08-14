@@ -120,7 +120,7 @@ body {
 .sidebar {
     background-color: var(--secondary-background-color);
     width: clamp(280px, 90%, 400px);
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 3.75em;
     padding: 1.875em 0;
@@ -184,3 +184,6 @@ body {
     text-transform: uppercase;
     margin-top: auto;
 }
+
+/* Mobile Navbar Styles */
+
