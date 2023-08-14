@@ -112,5 +112,7 @@ body {
 .sidebar {
     background-color: var(--secondary-background-color);
     width: clamp(280px, 90%, 400px);
-    
+    display: flex;
+    flex-direction: column;
+    gap: 3.75em;
 }
