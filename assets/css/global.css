@@ -84,6 +84,10 @@ body {
     font-size: 20px;
 }
 
+.icon-md {
+    font-size: 35px;
+}
+
 .icon-ph_envelope:before {
   content: "\e900";
 }
