@@ -129,11 +129,14 @@ body {
     padding: 0 1.875em;
 }
 
-/* Sidebar Nav Styles */
-.sidebar-nav-title {
-    margin: 0 1.875em 0.625em 1.875em;
+.sidebar-nav-title,
+.sidebar-social-title {
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.sidebar-nav-title {
+    margin: 0 1.875em 0.625em 1.875em;
 }
 
 .sidebar-nav-menu {
@@ -151,8 +154,10 @@ body {
     gap: 5px;
 }
 
-/* Sidebar social styles */
-
 .sidebar-social-wrapper {
     padding: 0 1.875em;
+}
+
+.sidebar-social-title {
+    margin-bottom: 0.625em;
 }
