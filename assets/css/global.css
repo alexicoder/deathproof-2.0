@@ -194,3 +194,8 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-size: 14px;
+}
