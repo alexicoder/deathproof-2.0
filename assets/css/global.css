@@ -18,8 +18,11 @@
   --text-md: 18px;
   --text-sm: 16px;
   --text-xs: 14px;
+  --body-font: 'Rubik Light', sans-serif;
+  --heading-font: 'Rubik Light', sans-serif;
 }
 
+/* Icon Fonts */
 @font-face {
   font-family: "icomoon";
   src: url("/assets/fonts/icon/icomoon.eot");
@@ -32,6 +35,7 @@
   font-display: block;
 }
 
+/* Text Fonts */
 @font-face {
   font-family: "Rubik Light";
   src: url(/assets/fonts/text/Rubik-VariableFont_wght.eot)
@@ -53,6 +57,14 @@
   width: 1px;
 }
 
+body {
+    background-color: var(--main-background-colour);
+    color: var(--text-colour);
+    font-family: var(--body-font);
+    font-weight: 400;
+}
+
+/* Icon Classes */
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
@@ -99,5 +111,5 @@
 /* Sidebar Styles */
 .sidebar {
     background-color: var(--secondary-background-color);
-    
+
 }
