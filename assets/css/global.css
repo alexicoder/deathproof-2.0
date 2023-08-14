@@ -22,11 +22,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?j5hr8g');
-    src:  url('fonts/icomoon.eot?j5hr8g#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?j5hr8g') format('truetype'),
-      url('fonts/icomoon.woff?j5hr8g') format('woff'),
-      url('fonts/icomoon.svg?j5hr8g#icomoon') format('svg');
+    src:  url('/assets/fonts/icon/icomoon.eot');
+    src:  url('/assets/fonts/icon/icomoon.eot') format('embedded-opentype'),
+      url('/assets/fonts/icon/icomoon.ttf') format('truetype'),
+      url('/assets/fonts/icon/icomoon.woff') format('woff'),
+      url('/assets/fonts/icon/icomoon.svg') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -45,7 +45,7 @@
   .icon {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: never;
+    speak-as: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -56,3 +56,32 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .icon-ph_envelope:before {
+    content: "\e900";
+  }
+  .icon-ph_facebook-logo:before {
+    content: "\e901";
+  }
+  .icon-ph_house:before {
+    content: "\e902";
+  }
+  .icon-ph_image:before {
+    content: "\e903";
+  }
+  .icon-ph_instagram-logo:before {
+    content: "\e904";
+  }
+  .icon-ph_music-notes:before {
+    content: "\e905";
+  }
+  .icon-ph_pen:before {
+    content: "\e906";
+  }
+  .icon-ph_soundcloud-logo:before {
+    content: "\e907";
+  }
+  .icon-ph_spotify-logo:before {
+    content: "\e908";
+  }
+  
