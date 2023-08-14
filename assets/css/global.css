@@ -124,3 +124,9 @@ body {
 .sidebar-logo {
     padding: 0 1.875em;
 }
+
+/* Sidebar Nav Styles */
+.sidebar-nav-title {
+    margin-bottom: 0.625em;
+}
+
