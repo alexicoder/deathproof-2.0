@@ -119,14 +119,17 @@ body {
 /* Sidebar Styles */
 .sidebar {
     background-color: var(--secondary-background-color);
-    width: clamp(280px, 90%, 400px);
-    display: none;
+    width: clamp(280px, 85%, 400px);
+    display: flex;
     flex-direction: column;
     gap: 3.75em;
     padding: 1.875em 0;
     height: 100vh;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: -400px;
+    z-index: 2;
+    transition: left ease .6s;
 }
 
 .sidebar-logo {
@@ -205,10 +208,15 @@ body {
 
 .hamburger {
     padding: 10px;
+    transition: transform ease .5s;
 }
 
+.hamburger.open {
+    transform: rotate(45deg); /* Rotate the icon when open */
+  }
+
 .show {
-    display: flex !important;
+    left: 0;
 }
 
 .bar {
