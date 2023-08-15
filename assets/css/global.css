@@ -19,8 +19,8 @@
   --text-lg: 18px;
   --text-md: 16px;
   --text-sm: 14px;
-  --body-font: "Rubik Light", sans-serif;
-  --heading-font: "Rubik Light", sans-serif;
+  --body-font: Helvetica, sans-serif;
+  --heading-font: Helvetica, sans-serif;
 }
 
 /* Icon Fonts */
@@ -34,18 +34,6 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-}
-
-/* Text Fonts */
-@font-face {
-  font-family: "Rubik Light";
-  src: url(/assets/fonts/text/Rubik-VariableFont_wght.eot)
-      format("embedded-opentype"),
-    url(/assets/fonts/text/Rubik-VariableFont_wght.ttf) format("truetype"),
-    url(/assets/fonts/text/Rubik-VariableFont_wght.woff) format("woff"),
-    url(/assets/fonts/text/Rubik-VariableFont_wght.woff2) format("woff2");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -69,7 +57,7 @@ body {
 .title-xxl,
 .title-xl,
 .title-lg {
-    font-weight: 900;
+    font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
 }
