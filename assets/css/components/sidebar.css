@@ -1,0 +1,119 @@
+.sidebar {
+    background-color: var(--secondary-background-color);
+    width: clamp(280px, 85%, 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 3.75em;
+    padding: 1.875em 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -400px;
+    z-index: 2;
+    transition: left ease .6s;
+}
+
+.sidebar-logo {
+    padding: 0 1.875em;
+}
+
+.sidebar-nav-title,
+.sidebar-social-title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sidebar-nav-title {
+    margin: 0 1.875em 0.625em 1.875em;
+}
+
+.sidebar-nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav-link {
+    color: var(--text-colour);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 1.875em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+    transition: 
+    background-color ease .3s,
+    gap ease .3s,
+    color ease .3s,
+    border ease .3s;
+}
+
+.sidebar-nav-link:hover {
+    background-color: var(--main-background-colour);
+    gap: 8px;
+    color: var(--heading-colour);
+    border-top: solid 1px var(--heading-colour);
+    border-bottom: solid 1px var(--heading-colour);
+}
+
+.sidebar-nav-link:active {
+    background-color: var(--primary-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-wrapper {
+    padding: 0 1.875em;
+}
+
+.sidebar-social-title {
+    margin-bottom: 0.625em;
+}
+
+.sidebar-social-links {
+    display: flex;
+    gap: 1.2em;
+}
+
+.sidebar-social-icon {
+    color: var(--text-colour);
+    text-decoration: none;
+    padding: .2em;
+    border-bottom: solid 2px var(--main-background-colour);
+    transition: background-color ease .3s;
+}
+
+.sidebar-social-icon:hover {
+    background-color: var(--main-background-colour);
+}
+
+.sidebar-social-icon:nth-child(1):active {
+    background-color: var(--neon-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-icon:nth-child(2):active {
+    background-color: var(--subdued-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-icon:nth-child(3):active {
+    background-color: var(--secondary-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-icon:nth-child(4):active {
+    background-color: var(--interactive-colour);
+    color: var(--white);
+}
+
+.copyright {
+    padding: 0 1.875em;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: auto;
+}
+
+.show {
+    left: 0;
+}
