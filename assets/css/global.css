@@ -204,6 +204,10 @@ body {
     padding: 10px;
 }
 
+.show {
+    display: flex !important;
+}
+
 .bar {
     width: 25px;
     height: 4px;
