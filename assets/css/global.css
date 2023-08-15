@@ -19,8 +19,8 @@
   --text-lg: 18px;
   --text-md: 16px;
   --text-sm: 14px;
-  --body-font: 'Rubik Light', sans-serif;
-  --heading-font: 'Rubik Light', sans-serif;
+  --body-font: "Rubik Light", sans-serif;
+  --heading-font: "Rubik Light", sans-serif;
 }
 
 /* Icon Fonts */
@@ -59,35 +59,35 @@
 }
 
 body {
-    background-color: var(--main-background-colour);
-    color: var(--text-colour);
-    font-family: var(--body-font);
-    font-weight: 400;
+  background-color: var(--main-background-colour);
+  color: var(--text-colour);
+  font-family: var(--body-font);
+  font-weight: 400;
 }
 
 /* Typography Styles */
 .title-xxl {
-    font-size: var(--heading-xxl);
+  font-size: var(--heading-xxl);
 }
 
 .title-xl {
-    font-size: var(--heading-xl);
+  font-size: var(--heading-xl);
 }
 
 .title-lg {
-    font-size: var(--heading-lg);
+  font-size: var(--heading-lg);
 }
 
 .text-lg {
-    font-size: var(--text-lg);
+  font-size: var(--text-lg);
 }
 
 .text-md {
-    font-size: var(--text-md);
+  font-size: var(--text-md);
 }
 
 .text-sm {
-    font-size: var(--text-sm);
+  font-size: var(--text-sm);
 }
 
 /* Icon Styles */
@@ -107,11 +107,11 @@ body {
 }
 
 .icon-sm {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .icon-md {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .icon-ph_envelope:before {
@@ -140,41 +140,4 @@ body {
 }
 .icon-ph_spotify-logo:before {
   content: "\e908";
-}
-
-/* Mobile Navbar Styles */
-
-.navbar {
-    padding: 5px 5px 5px 15px;
-    background-color: var(--secondary-background-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-}
-
-.navbar-brand {
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.hamburger {
-    padding: 10px;
-    transition: transform ease .5s;
-}
-
-.hamburger.open {
-    transform: rotate(45deg); /* Rotate the icon when open */
-  }
-
-.bar {
-    width: 25px;
-    height: 4px;
-    background-color: var(--text-colour);
-}
-
-.bar:nth-child(2) {
-    margin: 3px 0;
 }
