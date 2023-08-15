@@ -10,6 +10,7 @@
   --interactive-colour: #4caf50;
   --heading-colour: #dadada;
   --text-colour: #bdbdbd;
+  --white: #ffffff;
 
   /* Typography */
   --text-xxl: clamp(38px, 4.5vw, 46px);
@@ -159,6 +160,26 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+    transition: 
+    background-color ease .3s,
+    gap ease .3s,
+    color ease .3s,
+    border ease .3s;
+}
+
+.sidebar-nav-link:hover {
+    background-color: var(--main-background-colour);
+    gap: 8px;
+    color: var(--heading-colour);
+    border-top: solid 1px var(--heading-colour);
+    border-bottom: solid 1px var(--heading-colour);
+}
+
+.sidebar-nav-link:active {
+    background-color: var(--primary-accent-colour);
+    color: var(--white);
 }
 
 .sidebar-social-wrapper {
@@ -179,6 +200,31 @@ body {
     text-decoration: none;
     padding: .2em;
     border-bottom: solid 2px var(--main-background-colour);
+    transition: background-color ease .3s;
+}
+
+.sidebar-social-icon:hover {
+    background-color: var(--main-background-colour);
+}
+
+.sidebar-social-icon:nth-child(1):active {
+    background-color: var(--neon-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-icon:nth-child(2):active {
+    background-color: var(--subdued-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-icon:nth-child(3):active {
+    background-color: var(--secondary-accent-colour);
+    color: var(--white);
+}
+
+.sidebar-social-icon:nth-child(4):active {
+    background-color: var(--interactive-colour);
+    color: var(--white);
 }
 
 .copyright {
