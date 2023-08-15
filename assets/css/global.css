@@ -13,9 +13,9 @@
   --white: #ffffff;
 
   /* Typography */
-  --text-xxl: clamp(38px, 4.5vw, 46px);
-  --text-xl: clamp(30px, 3.2vw, 36px);
-  --text-lg: 20px;
+  --text-xxl: clamp(36px, 4.5vw, 60px);
+  --text-xl: clamp(30px, 3.2vw, 48px);
+  --text-lg: clamp(28px, 3vw, 36px);
   --text-md: 18px;
   --text-sm: 16px;
   --text-xs: 14px;
@@ -65,7 +65,10 @@ body {
     font-weight: 400;
 }
 
-/* Icon Classes */
+/* Typography Styles */
+
+
+/* Icon Styles */
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
