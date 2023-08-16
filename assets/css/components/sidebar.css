@@ -101,7 +101,7 @@
 }
 
 .sidebar-social-title {
-    margin: 0 1.875em 0.625em 1.875em;
+    margin: 0 30px 0.625em 30px;
 }
 
 .sidebar-social-links {
@@ -113,7 +113,7 @@
 .sidebar-social-icon {
     color: var(--text-colour);
     text-decoration: none;
-    padding: .4em 1.875em;
+    padding: .4em 30px;
     transition: background-color ease .3s;
     position: relative;
     display: flex;
@@ -166,11 +166,17 @@
     cursor: pointer;
     gap: 5px;
     color: var(--text-colour);
+    padding-left: 30px;
   }
   
   .music-off #music-text {
     display: inline;
   }
+
+.copyright {
+    text-transform: capitalize;
+    padding-left: 30px;
+}
 
 .show {
     left: 0;
