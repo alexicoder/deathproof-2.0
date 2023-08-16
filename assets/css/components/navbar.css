@@ -2,7 +2,7 @@
 
 .navbar {
     padding: 5px 5px 5px 15px;
-    background-color: var(--secondary-background-color);
+    background-color: var(--secondary-background-colour);
     display: flex;
     justify-content: space-between;
     align-items: center;

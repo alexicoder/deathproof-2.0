@@ -1,7 +1,7 @@
 @import url(/assets/css/variables.css);
 
 .sidebar {
-    background-color: var(--secondary-background-color);
+    background-color: var(--secondary-background-colour);
     width: clamp(280px, 85%, 400px);
     display: flex;
     flex-direction: column;
@@ -92,8 +92,8 @@
 
 .sidebar-nav-link:hover {
     color: black;
-    box-shadow: 0 3px 20px 1px var(--main-background-color);
-    border: solid 2px var(--main-background-color);
+    box-shadow: 0 3px 5px 0 var(--main-background-colour);
+    border: solid 1px var(--main-background-colour);
     border-left: none;
 }
 
