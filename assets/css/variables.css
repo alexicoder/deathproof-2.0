@@ -1,0 +1,24 @@
+:root {
+    /* Colours */
+    --main-background-colour: #1a1a1a;
+    --secondary-background-color: #2c2c2c;
+    --primary-accent-colour: #f44336;
+    --secondary-accent-colour: #ff9800;
+    --tertiary-accent-colour: #ffeb3b;
+    --subdued-accent-colour: #9c27b0;
+    --neon-accent-colour: #00bcd4;
+    --interactive-colour: #4caf50;
+    --heading-colour: #dadada;
+    --text-colour: #bdbdbd;
+    --white: #ffffff;
+  
+    /* Typography */
+    --heading-xxl: clamp(36px, 4.5vw, 60px);
+    --heading-xl: clamp(30px, 3.2vw, 48px);
+    --heading-lg: clamp(28px, 3vw, 36px);
+    --text-lg: 18px;
+    --text-md: 16px;
+    --text-sm: 14px;
+    --body-font: Helvetica, sans-serif;
+    --heading-font: Helvetica, sans-serif;
+  }
