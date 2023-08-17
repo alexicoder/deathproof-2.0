@@ -92,9 +92,6 @@
 
 .sidebar-nav-link:hover {
     color: black;
-    box-shadow: 0 3px 5px 0 var(--main-background-colour);
-    border: solid 1px var(--main-background-colour);
-    border-left: none;
 }
 
 .sidebar-nav-link:active {
