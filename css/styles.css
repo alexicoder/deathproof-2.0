@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap');
+
 :root {
   --main-background-colour: #1a1a1a;
   --secondary-background-colour: #2c2c2c;
@@ -16,8 +18,8 @@
   --text-lg: 18px;
   --text-md: 16px;
   --text-sm: 14px;
-  --ff-heading: Helvetica, sans-serif;
-  --ff-body: Helvetica, sans-serif;
+  --ff-heading: 'Rubik', sans-serif;
+  --ff-body: 'Rubik', sans-serif;
 }
 
 @font-face {
@@ -49,11 +51,20 @@ body {
   font-weight: 400;
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex-grow: 1;
+}
+
 /* Typography Styles */
 .title-xxl,
 .title-xl,
 .title-lg {
-  font-weight: bold;
+  font-weight: 800;
   line-height: 1.3;
   text-transform: uppercase;
 }
