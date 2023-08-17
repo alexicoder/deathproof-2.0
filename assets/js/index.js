@@ -46,11 +46,11 @@ function updateMusicState() {
   if (musicEnabled) {
     document.body.classList.remove('music-off');
     musicIcon.textContent = '🎵';
-    musicText.textContent = 'Music On';
+    musicText.textContent = 'Sounds On';
   } else {
     document.body.classList.add('music-off');
     musicIcon.textContent = '🔇';
-    musicText.textContent = 'Music Off';
+    musicText.textContent = 'Sounds Off';
   }
 }
 
