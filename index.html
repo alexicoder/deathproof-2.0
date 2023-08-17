@@ -8,24 +8,22 @@
       content="Welcome to the electrifying world of Deathproof Audio. Experience the pulsating rhythms, captivating beats, and dynamic energy that define our musical journey."
     />
     <title>Deathproof Audio - Unleash the Beat</title>
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/global.css" />
-    <link rel="stylesheet" href="/assets/css/components/navbar.css" />
-    <link rel="stylesheet" href="/assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
   </head>
   <body>
     <div class="page-wrapper">
       <aside id="sidebar" class="sidebar">
-        <div class="sidebar-logo">
+        <div>
           <img src="/assets/images/jpg/logo.svg" alt="" />
         </div>
-        <section class="sidebar-nav-wrapper">
-          <p class="sidebar-nav-title">Pages</p>
-          <nav class="sidebar-nav-menu">
+          <nav class="menu">
+            <p class="menu-title">Pages</p>
             <a
               href="#"
               data-sound="/assets/sounds/sound-1.wav"
-              class="sidebar-nav-link"
+              class="menu-icon-link"
             >
               <span
                 class="icon icon-sm icon-ph_house"
@@ -36,7 +34,7 @@
             <a
               href="#"
               data-sound="/assets/sounds/sound-2.wav"
-              class="sidebar-nav-link"
+              class="menu-icon-link"
             >
               <span class="icon icon-sm icon-ph_pen" aria-hidden="true"></span>
               <span>about</span>
@@ -44,7 +42,7 @@
             <a
               href="#"
               data-sound="/assets/sounds/sound-3.wav"
-              class="sidebar-nav-link"
+              class="menu-icon-link"
             >
               <span
                 class="icon icon-sm icon-ph_music-notes"
@@ -55,7 +53,7 @@
             <a
               href="#"
               data-sound="/assets/sounds/sound-4.wav"
-              class="sidebar-nav-link"
+              class="menu-icon-link"
             >
               <span
                 class="icon icon-sm icon-ph_image"
@@ -66,7 +64,7 @@
             <a
               href="#"
               data-sound="/assets/sounds/sound-5.wav"
-              class="sidebar-nav-link"
+              class="menu-icon-link"
             >
               <span
                 class="icon icon-sm icon-ph_envelope"
@@ -75,14 +73,12 @@
               <span>contact</span>
             </a>
           </nav>
-        </section>
-        <section class="sidebar-social-wrapper">
-          <p class="sidebar-social-title">social links</p>
-          <nav class="sidebar-social-links">
+          <nav class="menu">
+            <p class="menu-title">social links</p>
             <a
               href=""
               data-sound="/assets/sounds/sound-6.wav"
-              class="sidebar-social-icon"
+              class="menu-icon-link"
             >
               <span class="icon icon-md icon-ph_facebook-logo"></span>
               <span class="text-sm">facebook</span>
@@ -90,7 +86,7 @@
             <a
               href=""
               data-sound="/assets/sounds/sound-7.wav"
-              class="sidebar-social-icon"
+              class="menu-icon-link"
             >
               <span class="icon icon-md icon-ph_instagram-logo"></span>
               <span class="text-sm">instagram</span>
@@ -98,7 +94,7 @@
             <a
               href=""
               data-sound="/assets/sounds/sound-8.wav"
-              class="sidebar-social-icon"
+              class="menu-icon-link"
             >
               <span class="icon icon-md icon-ph_soundcloud-logo"></span>
               <span class="text-sm">soundcloud</span>
@@ -106,13 +102,12 @@
             <a
               href=""
               data-sound="/assets/sounds/sound-9.wav"
-              class="sidebar-social-icon"
+              class="menu-icon-link"
             >
               <span class="icon icon-md icon-ph_spotify-logo"></span>
               <span class="text-sm">spotify</span>
             </a>
           </nav>
-        </section>
         <button
           id="music-toggle"
           class="toggle-button"

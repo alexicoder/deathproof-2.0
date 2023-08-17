@@ -1,0 +1,335 @@
+:root {
+  --main-background-colour: #1a1a1a;
+  --secondary-background-colour: #2c2c2c;
+  --primary-accent-colour: #f44336;
+  --secondary-accent-colour: #ff9800;
+  --tertiary-accent-colour: #ffeb3b;
+  --subdued-accent-colour: #9c27b0;
+  --neon-accent-colour: #00bcd4;
+  --interactive-colour: #4caf50;
+  --heading-colour: #dadada;
+  --text-colour: #bdbdbd;
+  --white: #ffffff;
+  --heading-xxl: clamp(36px, 4.5vw, 60px);
+  --heading-xl: clamp(30px, 3.2vw, 48px);
+  --heading-lg: clamp(28px, 3vw, 36px);
+  --text-lg: 18px;
+  --text-md: 16px;
+  --text-sm: 14px;
+  --ff-heading: Helvetica, sans-serif;
+  --ff-body: Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("/assets/fonts/icon/icomoon.eot");
+  src: url("/assets/fonts/icon/icomoon.eot") format("embedded-opentype"),
+    url("/assets/fonts/icon/icomoon.ttf") format("truetype"),
+    url("/assets/fonts/icon/icomoon.woff") format("woff"),
+    url("/assets/fonts/icon/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: var(--main-background-colour);
+  color: var(--text-colour);
+  font-family: var(--ff-body);
+  font-weight: 400;
+}
+
+/* Typography Styles */
+.title-xxl,
+.title-xl,
+.title-lg {
+  font-weight: bold;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.title-xxl {
+  font-size: var(--heading-xxl);
+}
+
+.title-xl {
+  font-size: var(--heading-xl);
+}
+
+.title-lg {
+  font-size: var(--heading-lg);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+.text-md {
+  font-size: var(--text-md);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+/* Icon Styles */
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sm {
+  font-size: 20px;
+}
+
+.icon-md {
+  font-size: 25px;
+}
+
+.icon-ph_envelope:before {
+  content: "\e900";
+}
+.icon-ph_facebook-logo:before {
+  content: "\e901";
+}
+.icon-ph_house:before {
+  content: "\e902";
+}
+.icon-ph_image:before {
+  content: "\e903";
+}
+.icon-ph_instagram-logo:before {
+  content: "\e904";
+}
+.icon-ph_music-notes:before {
+  content: "\e905";
+}
+.icon-ph_pen:before {
+  content: "\e906";
+}
+.icon-ph_soundcloud-logo:before {
+  content: "\e907";
+}
+.icon-ph_spotify-logo:before {
+  content: "\e908";
+}
+
+/* Button Styles */
+.button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--text-colour);
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  border: solid 1px var(--border-colour);
+  border-radius: 1em;
+  box-shadow: 0 6px 0 0 #b53228, 0 8px 0 0 #000;
+  position: relative;
+  z-index: 1;
+  transition: color ease 0.3s;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-accent-colour);
+  height: 100%;
+  width: 100%;
+  transition: transform ease-out 0.3s;
+  z-index: -1;
+  transform: scale(0);
+  border-radius: 1em;
+}
+
+.button:hover::before {
+  transform: scale(1);
+}
+
+.button:hover {
+  color: white;
+}
+
+.button:active {
+  box-shadow: 0 3px 0 0 #b53228, 0 6px 0 0 #000;
+  transform: translateY(2px);
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 5px 5px 5px 15px;
+  background-color: var(--secondary-background-colour);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.hamburger {
+  padding: 10px;
+  transition: border ease 0.5s, border-radius ease .5s;
+  border: solid 1px var(--text-colour);
+}
+
+.hamburger.open {
+  border: solid 1px var(--primary-accent-colour);
+  border-radius: 8px;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background-color: var(--text-colour);
+}
+
+.bar:nth-child(2) {
+  margin: 3px 0;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+  background-color: var(--secondary-background-colour);
+  width: clamp(280px, 85%, 400px);
+  display: flex;
+  flex-direction: column;
+  gap: 3.75em;
+  padding: 1.875em 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  z-index: 2;
+  transition: left ease 0.6s;
+}
+
+.sidebar img {
+  padding: 0 1.875em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-title {
+  margin: 0 1.875em 0.625em 1.875em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.menu-icon-link {
+  color: var(--text-colour);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 1.875em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 1;
+  transition: background-color ease 0.3s, gap ease 0.3s, color ease 0.3s,
+    border ease 0.3s;
+}
+
+.menu-icon-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: transparent;
+  transition: width ease 0.5s;
+}
+
+.menu-icon-link:hover::before {
+  width: 400px;
+}
+
+.menu-icon-link:hover {
+  color: black;
+}
+
+.menu-icon-link:active {
+  background-color: var(--primary-accent-colour);
+  color: var(--white);
+}
+
+.menu-icon-link:nth-child(2):hover::before {
+  background-color: var(--primary-accent-colour);
+}
+
+.menu-icon-link:nth-child(3):hover::before {
+  background-color: var(--secondary-accent-colour);
+}
+.menu-icon-link:nth-child(4):hover::before {
+  background-color: var(--tertiary-accent-colour);
+}
+.menu-icon-link:nth-child(5):hover::before {
+  background-color: var(--neon-accent-colour);
+}
+.menu-icon-link:nth-child(6):hover::before {
+  background-color: var(--interactive-colour);
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+  color: var(--text-colour);
+  padding-left: 30px;
+}
+
+.music-off #music-text {
+  display: inline;
+}
+
+.copyright {
+  margin-top: auto;
+  text-transform: capitalize;
+  padding-left: 30px;
+}
+
+.show {
+  left: 0;
+}
