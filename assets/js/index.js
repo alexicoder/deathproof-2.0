@@ -108,24 +108,18 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       const targetSectionId = link.getAttribute('data-target');
 
-      // Hide all sections except the target section
       sections.forEach(function (section) {
-        if (section.id !== targetSectionId) {
-          section.classList.remove('active');
-        }
+        section.classList.remove('active');
       });
 
-      // Show the selected section
       const targetSection = document.getElementById(targetSectionId);
       targetSection.classList.add('active');
 
-      // Automatically close sidebar on smaller screens
       if (screenWidth <= 1100) {
         sidebar.classList.remove('show');
         hamburgerButton.classList.remove('active');
       }
 
-      // Set title color using CSS variable based on section ID
       const titleElement = document.querySelector(`#${targetSectionId}-title.title-xxl`);
       if (titleElement) {
         const titleColorVariable = `--${targetSectionId}-title-color`;
