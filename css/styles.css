@@ -155,7 +155,7 @@ body {
   font-size: 18px;
   text-transform: uppercase;
   padding: 1em 2em;
-  border: solid 1px var(--border-colour);
+  border: solid 1px var(--primary-accent-colour);
   border-radius: 1em;
   box-shadow: 0 6px 0 0 #b53228, 0 8px 0 0 #000;
   position: relative;
