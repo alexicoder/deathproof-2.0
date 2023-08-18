@@ -102,9 +102,11 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       const targetSectionId = link.getAttribute('data-target');
 
-      // Hide all sections
+      // Hide all sections except the target section
       sections.forEach(function (section) {
-        section.classList.remove('active');
+        if (section.id !== targetSectionId) {
+          section.classList.remove('active');
+        }
       });
 
       // Show the selected section
