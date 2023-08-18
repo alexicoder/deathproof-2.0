@@ -21,6 +21,9 @@
   --text-sm: 14px;
   --ff-heading: "Rubik", sans-serif;
   --ff-body: "Rubik", sans-serif;
+  /* Colour Variables for JavaScript */
+  --home-title-color: var(--tertiary-accent-colour);
+  --about-title-color: var(--primary-accent-colour);
 }
 
 @font-face {

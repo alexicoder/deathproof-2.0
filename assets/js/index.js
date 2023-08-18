@@ -97,6 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburgerButton = document.querySelector('.hamburger');
   const screenWidth = window.innerWidth;
 
+  // Set default color for home title
+  const homeTitleElement = document.querySelector('#home-title.title-xxl');
+  if (homeTitleElement) {
+    homeTitleElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--home-title-color');
+  }
+
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
       event.preventDefault();
@@ -117,6 +123,13 @@ document.addEventListener('DOMContentLoaded', function () {
       if (screenWidth <= 1100) {
         sidebar.classList.remove('show');
         hamburgerButton.classList.remove('active');
+      }
+
+      // Set title color using CSS variable based on section ID
+      const titleElement = document.querySelector(`#${targetSectionId}-title.title-xxl`);
+      if (titleElement) {
+        const titleColorVariable = `--${targetSectionId}-title-color`;
+        titleElement.style.color = getComputedStyle(document.documentElement).getPropertyValue(titleColorVariable);
       }
     });
   });
