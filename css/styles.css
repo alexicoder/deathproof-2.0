@@ -60,6 +60,14 @@ body {
   margin: 0 auto;
 }
 
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+}
+
 /* Typography Styles */
 .title-xxl,
 .title-xl,
@@ -79,6 +87,10 @@ body {
 
 .title-lg {
   font-size: var(--heading-lg);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-lg {
@@ -414,7 +426,7 @@ body {
     display: none;
   }
 
-  .content-area {
+  .content {
     width: 70%;
     margin-left: auto;
   }

@@ -89,3 +89,24 @@ musicToggle.addEventListener('click', toggleMusic);
 
 // Initialize button appearance on page load
 updateMusicState();
+
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.page-section');
+  const navLinks = document.querySelectorAll('.menu-icon-link');
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      const targetSectionId = link.getAttribute('data-target');
+      
+      // Hide all sections
+      sections.forEach(function (section) {
+        section.classList.remove('active');
+      });
+
+      // Show the selected section
+      const targetSection = document.getElementById(targetSectionId);
+      targetSection.classList.add('active');
+    });
+  });
+});
