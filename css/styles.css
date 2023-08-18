@@ -353,6 +353,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2.5em;
+  padding: 2.5em 1em;
   text-align: center;
 }
 
