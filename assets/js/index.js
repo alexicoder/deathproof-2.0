@@ -93,6 +93,9 @@ updateMusicState();
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.page-section');
   const navLinks = document.querySelectorAll('.menu-icon-link');
+  const sidebar = document.querySelector('.sidebar');
+  const hamburgerButton = document.querySelector('.hamburger-button');
+  const screenWidth = window.innerWidth;
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
@@ -107,6 +110,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // Show the selected section
       const targetSection = document.getElementById(targetSectionId);
       targetSection.classList.add('active');
+
+      // Automatically close sidebar on smaller screens
+      if (screenWidth <= 1100) {
+        sidebar.classList.remove('show');
+        hamburgerButton.classList.remove('active');
+      }
     });
   });
 });
