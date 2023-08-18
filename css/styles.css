@@ -9,6 +9,7 @@
   --subdued-accent-colour: #9c27b0;
   --neon-accent-colour: #00bcd4;
   --interactive-colour: #4caf50;
+  --border-colour: #E91E63;
   --heading-colour: #dadada;
   --text-colour: #bdbdbd;
   --white: #ffffff;
@@ -352,7 +353,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5em;
+  gap: 3.75em;
   padding: 2.5em 1em;
   text-align: center;
 }
@@ -360,4 +361,14 @@ body {
 .hero h1 {
   color: var(--tertiary-accent-colour);
   margin-bottom: .2em;
+}
+
+.hero picture {
+  padding: .625em;
+  border: solid 1px var(--border-colour);
+  border-radius: 1em;
+}
+
+.hero img {
+  border-radius: .5em;
 }
