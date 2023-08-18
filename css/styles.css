@@ -411,3 +411,17 @@ body {
     padding: 8em 6em;
   }
 }
+
+@media screen and (min-width: 1900px) {
+  .page-wrapper {
+    border-right: solid 5px var(--secondary-background-colour);
+  }
+
+  .sidebar {
+    position: sticky;
+  }
+
+  .hero {
+    justify-content: flex-start;
+  }
+}
