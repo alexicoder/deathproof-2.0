@@ -1,7 +1,6 @@
 const hamburgerButton = document.getElementById('hamburger-button');
 const sidebar = document.getElementById('sidebar');
-const navLinks = document.querySelectorAll('.menu-icon-link');
-const socialLinks = document.querySelectorAll('.menu-icon-link');
+const menuLinks = document.querySelectorAll('.menu-icon-link');
 const soundToggle = document.getElementById('sound-toggle');
 const soundIcon = document.getElementById('sound-icon');
 const musicToggle = document.getElementById('music-toggle');
@@ -20,23 +19,31 @@ function playSound(soundSrc) {
   sound.play();
 }
 
-navLinks.forEach((link) => {
-  const soundSrc = link.getAttribute('data-sound');
+menuLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    const soundSrc = link.dataset.sound;
 
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the default link behavior
+    // Play the corresponding sound effect
     playSound(soundSrc);
+    
+    // Prevent the default hyperlink behavior
+    event.preventDefault();
+    
+    // Delay the navigation after the sound finishes playing
+    setTimeout(() => {
+      // Navigate to the hyperlink URL
+      window.location.href = link.href;
+    }, getSoundDuration(soundSrc) + 100); // Adjust the delay as needed
   });
 });
 
-socialLinks.forEach((link) => {
-  const soundSrc = link.getAttribute('data-sound');
-
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the default link behavior
-    playSound(soundSrc);
-  });
-});
+// Helper function to get sound duration (in milliseconds)
+function getSoundDuration(soundSrc) {
+  // Implement logic to retrieve sound duration from the sound file
+  // You may need to use an audio library or API to get this information
+  // For demonstration purposes, returning a fixed value of 2000 milliseconds (2 seconds)
+  return 2000;
+}
 
 // Check local storage for music preference
 let musicEnabled = localStorage.getItem('musicEnabled') !== 'false';
