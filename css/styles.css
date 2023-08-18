@@ -191,6 +191,16 @@ body {
   transform: translateY(2px);
 }
 
+/* Header Styles */
+.page-header {
+  padding: 2.5em 1em;
+}
+
+.page-header h1 {
+  margin: 5px 0;
+  width: 100%;
+}
+
 /* Navbar Styles */
 .navbar {
   padding: 5px 5px 5px 15px;
