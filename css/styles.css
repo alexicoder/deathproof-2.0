@@ -352,7 +352,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3.75em;
-  padding: 2.5em 1em;
+  padding: 4em 1em;
   text-align: center;
 }
 
@@ -383,7 +383,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 4em;
+    padding: 6em 4em;
   }
 }
 
@@ -408,6 +408,6 @@ body {
   }
 
   .hero {
-    padding: 3.75em;
+    padding: 8em 6em;
   }
 }
