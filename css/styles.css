@@ -13,9 +13,9 @@
   --heading-colour: #dadada;
   --text-colour: #bdbdbd;
   --white: #ffffff;
-  --heading-xxl: clamp(36px, 4.5vw, 60px);
-  --heading-xl: clamp(30px, 3.2vw, 48px);
-  --heading-lg: clamp(28px, 3vw, 36px);
+  --heading-xxl: clamp(32px, 4.5vw, 60px);
+  --heading-xl: clamp(28px, 3.2vw, 48px);
+  --heading-lg: clamp(26px, 3vw, 36px);
   --text-lg: 18px;
   --text-md: 16px;
   --text-sm: 14px;
@@ -56,6 +56,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
+  max-width: 1900px;
 }
 
 .content-area {
@@ -66,7 +68,7 @@ body {
 .title-xxl,
 .title-xl,
 .title-lg {
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.3;
   text-transform: uppercase;
 }
@@ -358,9 +360,19 @@ body {
   text-align: center;
 }
 
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero h1 {
   color: var(--tertiary-accent-colour);
   margin-bottom: .2em;
+}
+
+.hero p {
+  margin-bottom: 2em;
 }
 
 .hero picture {
@@ -371,4 +383,24 @@ body {
 
 .hero img {
   border-radius: .5em;
+}
+
+@media screen and (min-width: 1100px) {
+  .sidebar {
+    left: 0;
+    width: 30%;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .content-area {
+    width: 70%;
+    margin-left: auto;
+  }
+
+  .hero {
+    padding: 3.75em;
+  }
 }
