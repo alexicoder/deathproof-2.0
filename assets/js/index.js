@@ -94,14 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.page-section');
   const navLinks = document.querySelectorAll('.menu-icon-link');
   const sidebar = document.querySelector('.sidebar');
-  const hamburgerButton = document.querySelector('.hamburger-button');
+  const hamburgerButton = document.querySelector('.hamburger');
   const screenWidth = window.innerWidth;
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const targetSectionId = link.getAttribute('data-target');
-      
+
       // Hide all sections
       sections.forEach(function (section) {
         section.classList.remove('active');

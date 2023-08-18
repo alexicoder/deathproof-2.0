@@ -369,8 +369,8 @@ body {
 }
 
 /* Hero Styles */
-.hero {
-  display: flex;
+.page-section {
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
