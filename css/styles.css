@@ -102,6 +102,10 @@ body {
   gap: 2em;
 }
 
+.text-image-block:nth-child(even) {
+  background-color: var(--secondary-background-colour);
+}
+
 /* Typography Styles */
 .title-xxl,
 .title-xl,
