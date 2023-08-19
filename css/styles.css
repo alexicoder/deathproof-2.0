@@ -72,10 +72,10 @@ body {
 
 .page-section {
   display: none; /* Hide all sections by default */
+  flex-direction: column;
   position: relative;
   padding: 2.5em 1em;
   gap: 4em;
-  text-align: center;
   transition: display ease .5s;
 }
 
