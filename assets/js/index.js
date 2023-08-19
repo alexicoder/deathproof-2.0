@@ -11,6 +11,7 @@ let currentlyPlayingSound = null;
 hamburgerButton.addEventListener('click', function () {
   sidebar.classList.toggle('show');
   hamburgerButton.classList.toggle('open');
+  hamburgerButton.classList.toggle('active');
 });
 
 function playSound(soundSrc) {

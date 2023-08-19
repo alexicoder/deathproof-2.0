@@ -282,16 +282,30 @@ body {
   border-radius: 8px;
 }
 
-.bar {
-  width: 25px;
-  height: 4px;
-  background-color: var(--text-colour);
-}
-
 .bar:nth-child(2) {
   margin: 3px 0;
 }
 
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-colour);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 /* Sidebar Styles */
 
 .sidebar {
