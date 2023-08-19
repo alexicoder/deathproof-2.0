@@ -83,6 +83,25 @@ body {
   display: flex;
 }
 
+#about.page-section {
+  padding: 0;
+  gap: 0;
+}
+
+.text-image-block {
+  padding: 2.5em 1em;
+  border-top: solid 1px var(--border-colour);
+  border-bottom: solid 1px var(--border-colour);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.text-image-block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
 
 /* Typography Styles */
 .title-xxl,
@@ -222,6 +241,7 @@ body {
 /* Header Styles */
 .page-header {
   text-align: start;
+  padding: 2.5em 1em;
 }
 
 .image-styles {
@@ -390,6 +410,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 2.5em;
 }
 
