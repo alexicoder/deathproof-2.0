@@ -73,7 +73,7 @@ body {
 .page-section {
   display: none; /* Hide all sections by default */
   position: relative;
-  padding: 8em 1em;
+  padding: 2.5em 1em;
   gap: 4em;
   text-align: center;
   transition: display ease .5s;
@@ -221,7 +221,7 @@ body {
 
 /* Header Styles */
 .page-header {
-  padding: 2.5em 1em;
+  text-align: start;
 }
 
 .image-styles {
@@ -405,7 +405,7 @@ body {
   }
 
   .page-section {
-    padding: 8em 3em;
+    padding: 3.75em 3em;
   }
 
   .sidebar {
