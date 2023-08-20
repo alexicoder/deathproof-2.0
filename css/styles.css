@@ -249,6 +249,12 @@ body {
   transform: translateY(2px);
 }
 
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
 .social-button {
   display: flex;
   flex-direction: column;
@@ -261,7 +267,7 @@ body {
   border-radius: 1em;
   background-color: var(--secondary-background-colour);
   color: var(--text-colour);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, gap .3s;
   padding: 3.75em;
   width: 100%;
 }
@@ -274,6 +280,11 @@ body {
   background-color: var(--button-hover-background-color);
   color: var(--white);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+}
+
+.social-button:active {
+  gap: 1em;
+  background-color: var(--secondary-background-colour);
 }
 
 /* Specific button styles */
@@ -326,6 +337,10 @@ body {
 
 .contact-header {
   border-color: var(--contact-title-color);
+}
+
+.section-header {
+  margin-bottom: 2.5em;
 }
 
 .image-styles {
