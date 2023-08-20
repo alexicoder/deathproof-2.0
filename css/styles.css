@@ -267,7 +267,7 @@ body {
   border-radius: 1em;
   background-color: var(--secondary-background-colour);
   color: var(--text-colour);
-  transition: background-color 0.3s, color 0.3s, gap .3s;
+  transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s, gap ease-in-out .3s, transform ease-in-out .3s;
   padding: 3.75em;
   width: 100%;
 }
@@ -280,6 +280,7 @@ body {
   background-color: var(--button-hover-background-color);
   color: var(--white);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+  transform: translateY(-3px);
 }
 
 .social-button:active {
