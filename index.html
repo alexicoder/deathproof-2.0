@@ -328,6 +328,25 @@
           <h1 class="title-xxl" id="music-title">Sonic Journeys Unleashed</h1>
           <p class="text-lg">Dive into the heart of Deathproof Audio's music</p>
         </header>
+        <picture>
+          <source
+            srcset="
+            /assets/images/webp/music-header-480.webp 480w,
+            /assets/images/webp/music-header-680.webp 680w.
+            /assets/images/webp/music-header-900.webp 900w
+            "
+            sizes="(max-width: 900px)"
+          />
+          <source
+            srcset="/assets/images/webp/music-header-900.webp 900w"
+            type="image/webp"
+          />
+          <img
+          src="/assets/images/webp/music-header-900.webp"
+          alt=""
+          class="image-styles"
+        />
+        </picture>
       </section>
       </div>
     </div>
