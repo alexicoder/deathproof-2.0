@@ -24,6 +24,9 @@
   /* Colour Variables for JavaScript */
   --home-title-color: var(--tertiary-accent-colour);
   --about-title-color: var(--primary-accent-colour);
+  --music-title-color: var(--secondary-accent-colour);
+  --gallery-title-color: var(--interactive-color);
+  --contact-title-color: var(--neon-accent-color);
 }
 
 @font-face {
