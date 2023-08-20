@@ -246,7 +246,9 @@ body {
 
 /* Header Styles */
 .page-header {
-  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 2.5em 1em;
 }
 
