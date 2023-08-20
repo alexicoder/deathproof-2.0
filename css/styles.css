@@ -273,6 +273,7 @@ body {
 .social-button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--white);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
 }
 
 /* Specific button styles */
