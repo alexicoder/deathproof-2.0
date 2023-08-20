@@ -250,7 +250,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 2.5em 1em;
+  padding: 2.5em 0;
 }
 
 .image-styles {
@@ -436,6 +436,7 @@ body {
   justify-content: center;
   text-align: center;
   gap: 2em;
+  padding: 2.5em 0;
 }
 
 
