@@ -245,6 +245,46 @@ body {
   transform: translateY(2px);
 }
 
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid var(--button-border-color);
+  background-color: var(--secondary-background-colour);
+  color: var(--text-colour);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-button .icon {
+  color: inherit;
+}
+
+.social-button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--white);
+}
+
+/* Specific button styles */
+.facebook {
+  --button-border-color: var(--neon-accent-colour);
+  --button-hover-background-color: var(--neon-accent-colour);
+}
+
+.instagram {
+  --button-border-color: var(--subdued-accent-colour);
+  --button-hover-background-color: var(--subdued-accent-colour);
+}
+
+.soundcloud {
+  --button-border-color: var(--secondary-accent-colour);
+  --button-hover-background-color: var(--secondary-accent-colour);
+}
+
+.spotify {
+  --button-border-color: var(--interactive-colour);
+  --button-hover-background-color: var(--interactive-colour);
+}
+
 /* Header Styles */
 .page-header {
   display: flex;
