@@ -76,6 +76,7 @@ body {
 .page-section {
   display: none; /* Hide all sections by default */
   flex-direction: column;
+  gap: 3.75em;
   position: relative;
   padding: 3.75em 1em;
   width: 100%;

@@ -129,3 +129,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.page-section');
+
+  sections.forEach(function (section) {
+    const sectionId = section.getAttribute('id');
+    const sectionHeader = section.querySelector('header');
+    sectionHeader.style.borderBottom = `2px solid var(--${sectionId}-title-color)`;
+  });
+});
