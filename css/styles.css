@@ -171,6 +171,10 @@ body {
   font-size: 25px;
 }
 
+.icon-lg {
+  font-size: 60px;
+}
+
 .icon-ph_envelope:before {
   content: "\e900";
 }
@@ -246,13 +250,20 @@ body {
 }
 
 .social-button {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 1.25em;
+  text-decoration: none;
   padding: 10px 20px;
   border: 2px solid var(--button-border-color);
+  border-radius: 1em;
   background-color: var(--secondary-background-colour);
   color: var(--text-colour);
   transition: background-color 0.3s, color 0.3s;
+  padding: 3.75em;
+  width: 100%;
 }
 
 .social-button .icon {
