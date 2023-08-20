@@ -135,8 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   sections.forEach(function (section) {
     const sectionId = section.getAttribute('id');
-    const sectionHeader = section.querySelector('header');
-    sectionHeader.style.borderTop = `2px solid var(--${sectionId}-title-color)`;
-    sectionHeader.style.borderBottom = `2px solid var(--${sectionId}-title-color)`;
+    const sectionHeader = section.querySelector('.page-header');
+    sectionHeader.classList.add(`${sectionId}-header`);
   });
 });

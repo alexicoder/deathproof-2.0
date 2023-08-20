@@ -251,6 +251,29 @@ body {
   flex-direction: column;
   gap: 5px;
   padding: 2.5em 0;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.home-header {
+  border-color: var(--home-title-color);
+}
+
+.about-header {
+  border-color: var(--about-title-color);
+}
+
+.music-header {
+  border-color: var(--music-title-color);
+}
+
+.gallery-header {
+  border-color: var(--gallery-title-color);
+}
+
+.contact-header {
+  border-color: var(--contact-title-color);
 }
 
 .image-styles {
