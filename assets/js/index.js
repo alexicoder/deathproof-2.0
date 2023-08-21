@@ -104,29 +104,50 @@ document.addEventListener('DOMContentLoaded', function () {
     homeTitleElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--home-title-color');
   }
 
+  // Smooth scrolling navigation to target sections
+  const smoothScrollToSection = (targetSectionId) => {
+    const targetSection = document.getElementById(targetSectionId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+    sections.forEach(function (section) {
+      section.classList.remove('active');
+    });
+
+    targetSection.classList.add('active');
+    
+    // Rest of your navigation logic
+    
+    // Update the color of the title element
+    const titleElement = document.querySelector(`#${targetSectionId}-title.title-xxl`);
+    if (titleElement) {
+      const titleColorVariable = `--${targetSectionId}-title-color`;
+      titleElement.style.color = getComputedStyle(document.documentElement).getPropertyValue(titleColorVariable);
+    }
+  };
+
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const targetSectionId = link.getAttribute('data-target');
 
-      sections.forEach(function (section) {
-        section.classList.remove('active');
-      });
-
-      const targetSection = document.getElementById(targetSectionId);
-      targetSection.classList.add('active');
+      // Call the smoothScrollToSection function
+      smoothScrollToSection(targetSectionId);
 
       if (screenWidth <= 1100) {
         sidebar.classList.remove('show');
         hamburgerButton.classList.remove('active');
       }
-
-      const titleElement = document.querySelector(`#${targetSectionId}-title.title-xxl`);
-      if (titleElement) {
-        const titleColorVariable = `--${targetSectionId}-title-color`;
-        titleElement.style.color = getComputedStyle(document.documentElement).getPropertyValue(titleColorVariable);
-      }
     });
+  });
+
+  // Smooth scrolling navigation for link in hero section
+  const musicLink = document.querySelector('.link-to-music');
+  musicLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    const targetSectionId = musicLink.getAttribute('href').substring(1); // Remove the leading '#'
+
+    // Call the smoothScrollToSection function
+    smoothScrollToSection(targetSectionId);
   });
 });
 
