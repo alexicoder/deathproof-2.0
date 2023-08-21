@@ -1,122 +1,92 @@
-const hamburgerButton = document.getElementById('hamburger-button');
-const sidebar = document.getElementById('sidebar');
-const menuLinks = document.querySelectorAll('.menu-icon-link');
-const soundToggle = document.getElementById('sound-toggle');
-const soundIcon = document.getElementById('sound-icon');
-const musicToggle = document.getElementById('music-toggle');
-const musicIcon = document.getElementById('music-icon');
-const musicText = document.getElementById('music-text');
-let currentlyPlayingSound = null;
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburgerButton = document.getElementById('hamburger-button');
+  const sidebar = document.getElementById('sidebar');
+  const menuLinks = document.querySelectorAll('.menu-icon-link');
+  const musicToggle = document.getElementById('music-toggle');
+  const musicIcon = document.getElementById('music-icon');
+  const musicText = document.getElementById('music-text');
+  let currentlyPlayingSound = null;
+  let musicEnabled = localStorage.getItem('musicEnabled') !== 'false';
 
-hamburgerButton.addEventListener('click', function () {
-  sidebar.classList.toggle('show');
-  hamburgerButton.classList.toggle('open');
-  hamburgerButton.classList.toggle('active');
-});
-
-function playSound(soundSrc) {
-  const sound = new Audio(soundSrc);
-  sound.currentTime = 0; // Reset audio to the beginning
-  sound.play();
-}
-
-menuLinks.forEach(link => {
-  link.addEventListener('click', function(event) {
-    const soundSrc = link.dataset.sound;
-
-    // Play the corresponding sound effect
-    playSound(soundSrc);
-    
-    // Prevent the default hyperlink behavior
-    event.preventDefault();
-    
-    // Delay the navigation after the sound finishes playing
-    setTimeout(() => {
-      // Navigate to the hyperlink URL
-      window.location.href = link.href;
-    }, getSoundDuration(soundSrc) + 100); // Adjust the delay as needed
+  hamburgerButton.addEventListener('click', function () {
+    sidebar.classList.toggle('show');
+    hamburgerButton.classList.toggle('open');
+    hamburgerButton.classList.toggle('active');
   });
-});
 
-// Helper function to get sound duration (in milliseconds)
-function getSoundDuration(soundSrc) {
-  // Implement logic to retrieve sound duration from the sound file
-  // You may need to use an audio library or API to get this information
-  // For demonstration purposes, returning a fixed value of 2000 milliseconds (2 seconds)
-  return 2000;
-}
-
-// Check local storage for music preference
-let musicEnabled = localStorage.getItem('musicEnabled') !== 'false';
-
-// Update button appearance and play sound
-function updateMusicState() {
-  if (musicEnabled) {
-    document.body.classList.remove('music-off');
-    musicIcon.textContent = '🎵';
-    musicText.textContent = 'Sounds On';
-  } else {
-    document.body.classList.add('music-off');
-    musicIcon.textContent = '🔇';
-    musicText.textContent = 'Sounds Off';
+  function playSound(soundSrc) {
+    if (musicEnabled) {
+      if (currentlyPlayingSound) {
+        currentlyPlayingSound.pause();
+      }
+      const sound = new Audio(soundSrc);
+      sound.currentTime = 0;
+      sound.play();
+      currentlyPlayingSound = sound;
+    }
   }
-}
 
-// Play sound if music is enabled
-function playSound(soundSrc) {
-  if (musicEnabled) {
-    if (currentlyPlayingSound) {
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      const soundSrc = link.dataset.sound;
+
+      playSound(soundSrc);
+      event.preventDefault();
+
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, getSoundDuration(soundSrc) + 100);
+    });
+  });
+
+  function getSoundDuration(soundSrc) {
+    // Logic to retrieve sound duration
+    return 2000;
+  }
+
+  function updateMusicState() {
+    const body = document.body;
+
+    if (musicEnabled) {
+      body.classList.remove('music-off');
+      musicIcon.textContent = '🎵';
+      musicText.textContent = 'Sounds On';
+    } else {
+      body.classList.add('music-off');
+      musicIcon.textContent = '🔇';
+      musicText.textContent = 'Sounds Off';
+    }
+  }
+
+  function toggleMusic() {
+    musicEnabled = !musicEnabled;
+    if (!musicEnabled && currentlyPlayingSound) {
       currentlyPlayingSound.pause();
     }
-    const sound = new Audio(soundSrc);
-    sound.currentTime = 0; // Reset audio to the beginning
-    sound.play();
-    currentlyPlayingSound = sound;
+    localStorage.setItem('musicEnabled', musicEnabled.toString());
+    updateMusicState();
   }
-}
 
-// Toggle music state
-function toggleMusic() {
-  musicEnabled = !musicEnabled;
-  if (!musicEnabled && currentlyPlayingSound) {
-    currentlyPlayingSound.pause();
-  }
-  localStorage.setItem('musicEnabled', musicEnabled.toString());
+  musicToggle.addEventListener('click', toggleMusic);
   updateMusicState();
-}
 
-// Attach click event listener to music toggle button
-musicToggle.addEventListener('click', toggleMusic);
-
-// Initialize button appearance on page load
-updateMusicState();
-
-document.addEventListener('DOMContentLoaded', function () {
+  // Smooth scrolling navigation and section appearance update
   const sections = document.querySelectorAll('.page-section');
   const navLinks = document.querySelectorAll('.menu-icon-link');
-  const sidebar = document.querySelector('.sidebar');
-  const hamburgerButton = document.querySelector('.hamburger');
   const screenWidth = window.innerWidth;
 
-  // Set default color for home title
-  const homeTitleElement = document.querySelector('#home-title.title-xxl');
-  if (homeTitleElement) {
-    homeTitleElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--home-title-color');
-  }
-
-  // Smooth scrolling navigation to target sections
   const smoothScrollToSection = (targetSectionId) => {
     const targetSection = document.getElementById(targetSectionId);
     targetSection.scrollIntoView({ behavior: 'smooth' });
 
-    sections.forEach(function (section) {
+    sections.forEach(section => {
       section.classList.remove('active');
     });
 
     targetSection.classList.add('active');
-    
+
     // Rest of your navigation logic
-    
+
     // Update the color of the title element
     const titleElement = document.querySelector(`#${targetSectionId}-title.title-xxl`);
     if (titleElement) {
@@ -125,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  navLinks.forEach(function (link) {
+  // Navigation links click events
+  navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const targetSectionId = link.getAttribute('data-target');
@@ -140,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Smooth scrolling navigation for link in hero section
+  // Music link click event in hero section
   const musicLink = document.querySelector('.link-to-music');
   musicLink.addEventListener('click', function (event) {
     event.preventDefault();
@@ -149,14 +120,29 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the smoothScrollToSection function
     smoothScrollToSection(targetSectionId);
   });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-  const sections = document.querySelectorAll('.page-section');
-
-  sections.forEach(function (section) {
+  // Section headers and appearance update
+  sections.forEach(section => {
     const sectionId = section.getAttribute('id');
     const sectionHeader = section.querySelector('.page-header');
     sectionHeader.classList.add(`${sectionId}-header`);
   });
+
+  // Show and hide sections with transition effect
+  function showSection(targetSectionId) {
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+
+    const targetSection = document.getElementById(targetSectionId);
+    targetSection.classList.add('active');
+
+    setTimeout(() => {
+      sections.forEach(section => {
+        if (section !== targetSection) {
+          section.classList.add('hidden');
+        }
+      });
+    }, 300); // Delay the hiding of other sections after 300ms (adjust as needed)
+  }
 });
