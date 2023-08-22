@@ -546,7 +546,11 @@ body {
 }
 
 input {
-  padding: 1.5em 1.875em 1em 1.875em;
+  padding: 1.5em 1.5em 1em 1.5em;
+}
+
+label {
+  position: absolute;
 }
 
 /* Media Queries */
