@@ -545,12 +545,17 @@ body {
   position: relative;
 }
 
-input {
-  padding: 1.5em 1.5em 1em 1.5em;
+input,
+textarea {
+  padding: 2em 1.5em 1em 1.5em;
   background-color: var(--main-background-colour);
   color: inherit;
   border: solid 1px var(--text-colour);
   width: 100%;
+}
+
+input[type="submit"] {
+  width: max-content;
 }
 
 label {
