@@ -552,6 +552,7 @@ textarea {
   color: inherit;
   border: solid 1px var(--text-colour);
   width: 100%;
+  color-scheme: dark;
 }
 
 input[type="submit"] {
