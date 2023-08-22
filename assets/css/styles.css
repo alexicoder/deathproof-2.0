@@ -545,6 +545,9 @@ body {
   position: relative;
 }
 
+input {
+  padding: 1.5em 1.875em 1em 1.875em;
+}
 
 /* Media Queries */
 
