@@ -580,6 +580,37 @@
               <h2 class="title-xl">Book the Beat</h2>
               <p class="text-lg">Bring Deathproof Audio to Your Event</p>
             </header>
+            <form action="">
+              <div class="input-container">
+                <label for="name">Name</label>
+                <input type="text" class="floating-input" id="name" required>
+              </div>
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" class="floating-input" id="email" required>
+              </div>
+              <div class="input-container">
+                <label for="phone-number">Phone Number</label>
+                <input type="text" class="floating-input" id="phone-number">
+              </div>
+              <div class="input-container">
+                <label for="date">Event Date (or preferred date range)</label>
+                <input type="date" class="floating-input" id="date" required>
+              </div>
+              <div class="input-container">
+                <label for="event-type">Type of Event (e.g., concert, party, festival)</label>
+                <input type="text" class="floating-input" id="event-type" required>
+              </div>
+              <div class="input-container">
+                <label for="location">Venue Location</label>
+                <input type="text" class="floating-input" id="location" required>
+              </div>
+              <div class="input-container">
+                <label for="comments">Additional Information or Comments</label>
+                <textarea name="comments" id="comments" class="floating-input" cols="30" rows="10"></textarea>
+              </div>
+              <input type="submit" value="submit" class="button">
+            </form>
           </div>
         </section>
       </div>
