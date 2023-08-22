@@ -535,6 +535,11 @@ body {
   left: 0;
 }
 
+.form-section {
+  background-color: var(--secondary-background-colour);
+  padding: 2em 1em;
+}
+
 
 
 
