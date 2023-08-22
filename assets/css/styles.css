@@ -540,7 +540,10 @@ body {
   padding: 2em 1em;
 }
 
-
+.input-container {
+  margin-bottom: 1.875em;
+  position: relative;
+}
 
 
 /* Media Queries */
