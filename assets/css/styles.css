@@ -543,6 +543,11 @@ body {
 @media screen and (min-width: 768px) {
   .button-group {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .social-button {
+    max-width: 48.5%;
   }
 }
 
